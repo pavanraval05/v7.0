@@ -1,4 +1,4 @@
-import * as dotenv from 'dotenv';
+
 
 import { HardhatUserConfig } from 'hardhat/config';
 import '@nomiclabs/hardhat-etherscan';
@@ -10,13 +10,13 @@ import "@nomiclabs/hardhat-ethers";
 
 import './tasks/deploy';
 
-dotenv.config();
 
 module.exports = {
   networks: {
-    sepolia: {
-      url: `https://sepolia.infura.io/v3/ff2ee68a760748dbb00ebfc0b112f787`,
-      accounts: ["47e179ec197488593b187f80a00eb0da91f1b9d0b13f8733639f19c30a34926a"],
+    georli: {
+      chainId: 5,
+      url: `https://eth-goerli.g.alchemy.com/v2/9_PhjVbypJLw-b4fr6P6B_27wVcPprxj`,
+      accounts: ["0xe214a0730c100f63dcd4457045a2ccd5a092fcc365ca7049e92388a5e571b666"],
     }
   },
   solidity: {
